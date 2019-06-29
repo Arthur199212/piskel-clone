@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Piskel Clone</title>
+
+  <!-- Fontawesome icons -->
+  <script src="https://kit.fontawesome.com/8757551082.js"></script>
+
+  <link rel="shortcut icon" type="image/png" href="https://www.piskelapp.com/static/resources/favicon.png" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header row">
+    <h1 class="header__logo">Piskel Clone</h1>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main row">
+
+    <!-- TOOLS -->
+    <div class="tools column">
+      <div class="tools__pen-size">
+        <div class="tools__pen-size__item first-size-pen highlight"></div>
+        <div class="tools__pen-size__item second-size-pen" title="Coming soon feature"></div>
+        <div class="tools__pen-size__item third-size-pen" title="Coming soon feature"></div>
+        <div class="tools__pen-size__item fourth-size-pen" title="Coming soon feature"></div>
+      </div>
+      <div class="tools__container">
+        <ul class="tools__wrapper row">
+          <li class="tools__item highlight_tool" data-tool="pen" title="Pen (P) "><i class="fas fa-pen"></i></li>
+          <li class="tools__item" data-tool="mirror" title="Vertical Mirror pen (V)"><i
+              class="fas fa-highlighter"></i></i></li>
+          <li class="tools__item" data-tool="paint-bucket" title="Paint bucket (B)"><i class="fas fa-fill-drip"></i>
+          </li>
+          <li class="tools__item" data-tool="fill-bucket" title="Paint all pixels of the same color (A)"><i
+              class="fas fa-paint-roller"></i></li>
+          <li class="tools__item" data-tool="eraser" title="Eraser tool (E)"><i class="fas fa-eraser"></i></li>
+          <li class="tools__item" data-tool="stroke" title="Stroke tool (L)"><i class="fas fa-pencil-ruler"></i></li>
+          <li class="tools__item" data-tool="rectangle" title="Rectangle tool (R)"><i class="fas fa-square-full"></i>
+          </li>
+          <li class="tools__item" data-tool="circle" title="Circle tool (C)"><i class="fas fa-circle"></i></li>
+          <li class="tools__item" data-tool="move" title="Move tool (M)"><i class="fas fa-hand-paper"></i></li>
+          <li class="tools__item" data-tool="selector" title="Coming soon feature"><i
+              class="fas fa-magic out-of-order"></i></li>
+          <li class="tools__item" data-tool="crop" title="Rectangle selection (S)"><i
+              class="fas fa-vector-square"></i></i></li>
+          <li class="tools__item" data-tool="lasso" title="Coming soon feature"><i
+              class="far fa-object-group out-of-order"></i></li>
+          <li class="tools__item" data-tool="lighten" title="Lighten (U)"><i class="fas fa-adjust"></i></li>
+          <li class="tools__item" data-tool="dithering" title="Dithering tool (T)"><i class="fas fa-chess-board"></i>
+          </li>
+          <li class="tools__item" data-tool="color-picker" title="Color picker (O)"><i class="fas fa-eye-dropper"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="tools__picker-container">
+        <input class="tools__picker-item secondary-color" type="color" id="secondary-color" name="secondary"
+          value="#1eac68">
+        <input class="tools__picker-item primary-color" type="color" id="primary-color" name="primary" value="#7ab8d9">
+        <i class="fas fa-sync-alt" id="switch-colors"></i>
+
+      </div>
+      <div class="tools__keybord-container"></div>
+    </div>
+
+    <!-- FRAMES -->
+    <div class="frames__wrapper">
+      <div class="frame__background">
+        <div class="frame__unit">
+          <div class="frame__item-button copy hide-button"><i class="fas fa-copy frame-button-icon"></i></div>
+          <div class="frame__item-button index">1</div>
+          <div class="frame__item-button trash hide-button"><i class="fas fa-trash-alt frame-button-icon"></i></div>
+          <div class="frame__item-button move-frame drag-item hide-button"><i class="fas fa-arrows-alt-v drag-item"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="frames__add-frame-button"><i class="fas fa-plus"></i>
+        <div>Add new frame</div>
+      </div>
+    </div>
+
+    <!-- CANVAS -->
+    <div class="canvas column" id="canvas__wrapper">
+      <div class="canvas__background">
+        <canvas class="canvas__item" width="608" height="608"></canvas>
+        <canvas class="canvas__buffer" width="608" height="608"></canvas>
+      </div>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview column">
+      <div class="preview__window">
+        <div class="preview__background">
+          <div class="preview__item">
+            <i id="fullScreen" class="fas fa-external-link-square-alt" title="Fullscreen mode"></i>
+          </div>
+        </div>
+        <div class="preview__fps-wrapper">
+          <div class="preview__fps-number" id="show-fps">10 FPS</div>
+          <input id="fps" class="fps" type="range" min="0" max="24" step="1" value="10">
+        </div>
+
+        <div class="preview__transform-wrapper">
+          <div class="transform__title">
+            Transform
+          </div>
+          <div class="transform__buttons-wrapper">
+            <div class="flip__button transform-button" title="Flip vertically">
+              <i class="fas fa-grip-lines-vertical"></i>
+            </div>
+            <div class="rotation__button transform-button" title="Clockwise rotation">
+              <i class="fas fa-redo-alt"></i>
+            </div>
+            <div class="invert__button transform-button" title="Invert colors">
+              <i class="fas fa-yin-yang"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="preview__data-wrapper">
+        <div class="preview__data canvas_size" id="canvas_size">
+          [ 32 x 32 ]
+        </div>
+        <div class="preview__data coordinates" id="coordinates">
+          1 : 1
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features column">
+      <div class="features__button resize__button" title="Resize">
+        <i class="fas fa-expand-arrows-alt"></i>
+      </div>
+      <div class="resize__info">
+        32 / 32
+      </div>
+      <!-- Download buttons -->
+      <a class="download__button apng__download" href="#" download="animated-image-png" title="Download PNG">
+        PNG
+      </a>
+      <a class="download__button gif__download" href="#" title="Download GIF">
+        GIF
+      </a>
+    </div>
+  </main>
+
+<script type="text/javascript" src="app.bundle.js"></script></body>
+
+</html>

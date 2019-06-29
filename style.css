@@ -1,0 +1,303 @@
+/* BASIC SETTINGS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", "Open Sans";
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #222222;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background-color: #2d2d2d;
+}
+
+.header__logo {
+  padding-left: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.header__botton {
+  margin-right: 10px;
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: #ffd700;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333333;
+  transition: 0.3s background-color;
+}
+
+.header__botton:hover {
+  background-color: #fff;
+}
+
+/* MAIN */
+
+/* SECTION: MAIN SCREEN */
+
+.main__screen {
+  display: flex;
+  flex-wrap: nowrap;
+  height: calc(100vh - 40px);
+  background-color: #505050;
+}
+
+.main__screen-sidewrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main__screen-sidewrapper:first-child {
+  padding: 0 30px;
+}
+
+.main__screen-sidewrapper + .main__screen-sidewrapper {
+  flex: 1.4;
+}
+
+.main__screen-header {
+  font-size: 38px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.main__screen-subheader {
+  padding-top: 20px;
+  font-size: 20px;
+  color: #c5c5c5;
+}
+
+.main__screen-botton-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.main__screen-botton {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: #ffd700;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  transition: 0.3s background-color;
+}
+
+.main__screen-botton:hover {
+  background-color: #fff;
+}
+
+.main__screen-image {
+  margin: 40px 0;
+  height: 100%;
+  width: 95%;
+  background-image: url(./assets/images/screen-main.png);
+  /* background-image: url(https://www.piskelapp.com/static/resources/home/screenshot_with_browser_ui_generic_full.png); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* SECTION: EXAMPLES */
+
+.main__examples-wrapper {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main__examples-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main__examples-header {
+  margin: 0 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.main__examples-description {
+  margin: 10px 5px 0;
+  font-size: 14px;
+  color: #c2c2c2;
+}
+
+.main__examples {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main__examples img {
+  image-rendering: pixelated;
+}
+
+.example {
+  margin: 9px 5px;
+  border: 3px solid;
+  border-radius: 3px;
+  border-color: #888888;
+}
+
+.example:hover {
+  border-color: #cccccc;
+}
+
+/* SECTION: ADVANTAGES */
+
+.advantages-section {
+  padding: 50px 0;
+  background-color: #181818;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item-column {
+  height: 140px;
+  color: #fff;
+}
+
+.row {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 350px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.small {
+  flex: 0.2;
+}
+
+.advantage-name {
+  margin-top: 13px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.advantage-description {
+  margin-top: 10px;
+  max-width: 80%;
+  font-size: 14px;
+  color: #c2c2c2;
+}
+
+.advantage-image {
+  margin: 9px 15px 9px 0;
+  border: 3px solid;
+  border-radius: 3px;
+  border-color: #fff;
+  image-rendering: pixelated;
+}
+
+.background-pattern {
+  background:url(https://www.piskelapp.com/static/resources/animated-preview-checker-background.png);
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.author-container {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.author-image-wrapper {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+
+.author-image {
+  border: 2px #fff solid;
+  border-radius: 50%;
+}
+
+.author-text {
+  color: #fff;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.author-text + .author-text {
+  margin-top: 10px;
+}
+
+.author-text a {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.author-text a:hover {
+  color: #a0a0a0;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1000px) {
+  .main__screen-image {
+    background-size: cover;
+  }
+
+  .main__screen-sidewrapper + .main__screen-sidewrapper {
+    flex: 1;
+  }
+
+  .main__examples {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .main__screen-sidewrapper + .main__screen-sidewrapper {
+    display: none;
+  }
+}

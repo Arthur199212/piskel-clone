@@ -296,6 +296,24 @@ body {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .main__screen-header {
+    font-size: 29px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .main__screen-subheader {
+    padding-top: 17px;
+    font-size: 20px;
+    color: #c5c5c5;
+  }
+
+  .main__screen-botton {
+    font-size: 20px;
+  }
+}
+
 @media only screen and (max-width: 625px) {
   .main__screen-sidewrapper + .main__screen-sidewrapper {
     display: none;

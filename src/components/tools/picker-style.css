@@ -1,0 +1,37 @@
+.tools__picker-container {
+  position: relative;
+}
+
+.tools__picker-item {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: rgb(68, 68, 68);
+  cursor: pointer;
+}
+
+.tools__picker-item:hover {
+  background-color: rgb(136, 136, 136);
+}
+
+.primary-color {
+  top: 5px;
+  left: 10px;
+}
+
+.secondary-color {
+  top: 35px;
+  left: 35px;
+}
+
+.fa-sync-alt {
+  position: absolute;
+  top: 60px;
+  left: 14px;
+  color: rgb(68, 68, 68);
+  cursor: pointer;
+}
+
+.fa-sync-alt:hover {
+  color: rgb(136, 136, 136);
+}

@@ -1,0 +1,113 @@
+/* FRAMES */
+.frames__wrapper {
+  margin-right: 6px;
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  color: #fff;
+  align-items: center;
+  height: 608px;
+  overflow-y: scroll;
+}
+
+.frame__background {
+  margin: 0 auto 10px;
+  width: 100px;
+  height: 100px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAV0lEQVRYCe2WMQ4AIAgD0bDwN/7/FUb9AR2Muhxr04QclDAyc1lTEdGoZlXV6so/W/cDkQYgAAFXOT3NufIzAghA4DsBVzm9fSe+E6ABCECAf4AdgAAENkFXF0Suev9HAAAAAElFTkSuQmCC) repeat;
+}
+
+.frame__unit {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid;
+  border-color: rgb(68, 68, 68);
+  border-radius: 5px;
+}
+
+.frame__item-button {
+  display: none;
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  line-height: 21px;
+  background-color: rgba(128, 128, 128, 0.5);
+  cursor: default;
+}
+
+.index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.move-frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: move;
+}
+
+.frame__unit .index {
+  color: #000;
+  background-color: rgba(255, 215, 0);
+}
+
+.copy, .trash {
+  cursor: pointer;
+}
+
+.frames__add-frame-button {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 5px;
+  width: 100px;
+  height: 43px;
+  border: 2px solid;
+  border-color: #707070;
+  border-radius: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+  color: #707070;
+}
+
+.frames__add-frame-button:hover {
+  border-color: rgba(255, 215, 0);
+  cursor: pointer;
+}
+
+.frames__add-frame-button i {
+  color: #fff;
+  font-size: 21px;
+  padding-right: 10px;
+}
+
+/* SCROLLBAR */
+.frames__wrapper::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  background-color: rgb(37, 37, 37);
+}
+
+.frames__wrapper::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+}
+
+.frames__wrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(102, 102, 102);
+}

@@ -1,0 +1,61 @@
+{
+  "name": "piskel-clone",
+  "version": "0.0.1",
+  "description": "RSS task: piskel-clone",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "dev": "webpack-dev-server --mode development --watch",
+    "build": "webpack --mode production",
+    "lint": "eslint src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rolling-scopes-school/Arthur199212-2019Q1/tree/piskel-clone"
+  },
+  "author": "Arthur Rubchenko <2146596@mail.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "canvas": "^2.5.0",
+    "canvas-prebuilt": "^2.0.0-alpha.14",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.3",
+    "extract-loader": "^3.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^4.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "ignore-styles": "^5.0.1",
+    "image-webpack-loader": "^5.0.0",
+    "jest": "^24.8.0",
+    "jest-canvas-mock": "^2.1.0",
+    "jest-css-modules": "^2.1.0",
+    "jest-transform-stub": "^2.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "setupFiles": [
+      "jest-canvas-mock"
+    ]
+  },
+  "dependencies": {
+    "gif.js.optimized": "^1.0.1",
+    "upng-js": "^2.1.0"
+  }
+}

@@ -202,6 +202,7 @@ input:focus {
 .canvas__buffer {
   position: absolute;
   top: 0;
+  left: 0;
   margin: auto;
   background: transparent;
 }

@@ -9,6 +9,8 @@
 
 Here is a clone of a real project piskelapp.com. To make this piskel-clone app I spent about 2 weeks. The project consists of a welcom page and drawing app. Using this app you can make drawings and download them as an animated image (GIF, JPEG).
 
+Limitations: not responsive, good only for screens 1366x768px.
+
 ### Welcome Page
 ![image](https://raw.githubusercontent.com/Arthur199212/screenshots/master/lp-piskel-clone.PNG)
 
